@@ -2,10 +2,10 @@ import { parse, wcagLuminance } from 'culori';
 
 export function getContrastTextColor(
   backgroundColor: string,
-): 'black' | 'white' {
+): 'dark' | 'light' {
   const color = parse(backgroundColor);
-  if (!color) return 'black';
+  if (!color) return 'dark';
 
   const luminance = wcagLuminance(color);
-  return luminance > 0.179 ? 'var(--c-dark)' : 'var(--c-light)';
+  return luminance > 0.179 ? 'dark' : 'light';
 }

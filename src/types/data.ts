@@ -8,9 +8,3 @@ export interface AppState {
   primaryPercentage: number;
   secondaryPercentage: number;
 }
-
-export interface ColorPreviewProps {
-  backgroundColor: string;
-  primaryColor: string;
-  resultColor: string;
-}

@@ -32,6 +32,11 @@ export function generateCssRule(
   colorSpace: ColorSpace,
   p1: number,
   p2: number,
+  primaryColor: string,
+  secondaryColor: string,
 ): string {
-  return `color-mix(in ${colorSpace}, var(--c-primary) ${p1}%, var(--c-secondary) ${p2}%)`;
+  return `--c-primary: ${primaryColor};
+--c-secondary: ${secondaryColor};
+color-mix(in ${colorSpace}, var(--c-primary) ${p1}%, var(--c-secondary) ${p2}%)
+`;
 }

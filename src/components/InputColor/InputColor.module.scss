@@ -7,13 +7,14 @@
 
 .wrapInput {
   --lw-icon: 1rem;
-  --lp: var(--s-df);
+  --lp: var(--s-xxs);
   --lx-icon: var(--s-sm);
   --lh-input: 3.5rem;
   --lw-border-input: 1px;
   --lc-border-input: var(--c-light-2);
   --lsw-input: inset 0 0 0 var(--lw-border-input) var(--lc-border-input);
 
+  width: 100%;
   display: flex;
   align-items: center;
   gap: var(--s-xxs);
@@ -35,8 +36,8 @@
 .picker {
   appearance: none;
   cursor: pointer;
-  width: calc(var(--lh-input) - var(--lp));
-  height: calc(var(--lh-input) - var(--lp));
+  width: calc(var(--lh-input) - (var(--lp) * 2));
+  height: calc(var(--lh-input) - (var(--lp) * 2));
   padding: 0;
   border: none;
   border-radius: var(--s-xxs);
@@ -59,6 +60,7 @@
 
 .input {
   appearance: none;
+  max-width: 8rem;
   height: var(--lh-input);
   flex: 1;
   padding: 0;

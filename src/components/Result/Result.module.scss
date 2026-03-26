@@ -1,101 +1,68 @@
-.container {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
+@use '@/styles/mixins/utils';
 
-.title {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #1f2937;
-  margin: 0;
-}
-
-.colorBox {
+.color {
   width: 100%;
-  height: 120px;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  height: 7.5rem;
+  position: relative;
+  border-radius: var(--s-df);
 }
 
-.hexValue {
-  font-size: 1.5rem;
-  font-weight: 700;
-  font-family: monospace;
+.color > * {
+  text-transform: uppercase;
 }
 
-.colorsUsed {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.colorSwatch {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.875rem;
-  color: #6b7280;
-}
-
-.swatchColor {
-  width: 24px;
-  height: 24px;
-  border-radius: 4px;
-  border: 2px solid #e5e7eb;
-}
-
-.plus {
-  font-size: 1.25rem;
-  color: #9ca3af;
-}
-
-.cssSection {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.cssLabel {
-  font-weight: 600;
-  font-size: 0.875rem;
-  color: #374151;
-}
-
-.cssRule {
-  display: flex;
-  gap: 0.5rem;
-  align-items: stretch;
-}
-
-.cssRule code {
-  flex: 1;
-  padding: 0.75rem;
-  background-color: #f3f4f6;
-  border-radius: 8px;
-  font-size: 0.875rem;
-  font-family: monospace;
+.code {
+  min-height: 5rem;
+  position: relative;
+  padding: var(--s-df);
+  border-radius: var(--s-df);
+  background-color: var(--c-dark-2);
+  font-family: var(--ff-main);
+  font-size: var(--fs-md);
+  line-height: 1.5;
   word-break: break-all;
-  display: flex;
-  align-items: center;
+  white-space: pre-wrap;
+  color: var(--c-light);
 }
 
-.copyButton {
-  padding: 0.75rem 1rem;
-  background-color: #3b82f6;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-weight: 600;
+.copy {
+  appearance: none;
   cursor: pointer;
-  transition: background-color 0.2s;
-  white-space: nowrap;
+  overflow: hidden;
+  width: var(--s-xxl);
+  height: var(--s-xxl);
+  display: flex;
+  position: absolute;
+  top: var(--s-xxs);
+  right: var(--s-xxs);
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: var(--s-us);
+  background: color-mix(in oklch, var(--c-black), transparent 80%);
+  transition: var(--transition-025);
 }
 
-.copyButton:hover {
-  background-color: #2563eb;
+.code .copy {
+  background: color-mix(in oklch, var(--c-light), transparent 90%);
+}
+
+.copy:focus {
+  outline: none;
+}
+
+.copy::-moz-focus-inner {
+  border: 0;
+}
+
+.copy:focus-visible {
+  @include utils.focus-visible;
+}
+
+.copy:active {
+  scale: 0.96;
+}
+
+.copy:hover {
+  background: var(--c-accent);
 }

@@ -1,3 +1,5 @@
+@use '@/styles/mixins/media';
+
 .main {
   min-height: 100dvh;
   display: flex;
@@ -13,6 +15,17 @@
 
 .content {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  flex: 1;
+  grid-template-columns: 1fr;
   gap: var(--s-tr);
+
+  @include media.media(md) {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+.wrapInput {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--s-df);
 }
