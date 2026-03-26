@@ -1,0 +1,58 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-xxs);
+}
+
+.wrapSelect {
+  --lw-icon: 1rem;
+  --lp: var(--s-df);
+  --lx-icon: var(--s-sm);
+  --lh-input: 3.5rem;
+
+  width: 100%;
+  position: relative;
+}
+
+.select {
+  --lw-border-input: 1px;
+  --lc-border-input: var(--c-light-2);
+  --lsw-input: inset 0 0 0 var(--lw-border-input) var(--lc-border-input);
+
+  appearance: none;
+  cursor: pointer;
+  width: 100%;
+  height: var(--lh-input);
+  padding-right: calc(var(--lp) + var(--lp-icon) + var(--lw-icon));
+  padding-left: var(--lp);
+  outline: none !important;
+  border: none;
+  border-radius: var(--s-sm);
+  background: none;
+  box-shadow: var(--lsw-input);
+  font-family: var(--ff-main);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-df);
+  color: var(--c-light);
+  transition: var(--transition-025);
+}
+
+.select:hover {
+  --lw-border-input: 2px;
+  --lc-border-input: var(--c-light);
+}
+
+.select:focus {
+  --lw-border-input: 2px;
+  --lc-border-input: var(--c-accent);
+}
+
+.icon {
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  right: var(--lx-icon);
+  transition: var(--transition-025);
+  translate: 0 -50%;
+}

@@ -1,0 +1,17 @@
+:root {
+  // Primitives
+  --c-black: #000000;
+  --c-white: #ffffff;
+  --c-body: #000000;
+  --c-dark: var(--c-black);
+  --c-dark-2: color-mix(in oklch, var(--c-black), var(--c-white) 20%);
+  --c-light: var(--c-white);
+  --c-light-2: color-mix(in oklch, var(--c-white), var(--c-black) 40%);
+  --c-accent: #66bb6a;
+
+  // Shadows
+  --sw-dp4: 0 1px 3px 0 rgb(0 0 0 / 13%), 0 0 0 0 rgb(0 0 0 / 11%);
+  --sw-dp8: 0 3px 7px 0 rgb(0 0 0 / 13%), 0 0 1px 0 rgb(0 0 0 / 11%);
+  --sw-dp16: 0 6px 14px 0 rgb(0 0 0 / 13%), 0 1px 3px 0 rgb(0 0 0 / 11%);
+  --sw-dp64: 0 25px 57px 0 rgb(0 0 0 / 22%), 0 4px 14px 0 rgb(0 0 0 / 18%);
+}

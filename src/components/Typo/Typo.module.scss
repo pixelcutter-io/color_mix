@@ -1,0 +1,20 @@
+.typo {
+  --lfs: clamp(var(--l-fs-min), 1rem + var(--l-fs-increase), var(--l-fs-max));
+
+  font-family: var(--l-ff);
+  font-weight: var(--l-fw);
+  font-size: var(--lfs);
+  line-height: calc(1em + var(--l-lh));
+  text-align: var(--l-align);
+  text-decoration: var(--l-decoration);
+  color: var(--l-c);
+  transition: var(--transition-025);
+}
+
+.balancer {
+  text-wrap: balance;
+}
+
+.hover:hover {
+  color: var(--c-black);
+}
