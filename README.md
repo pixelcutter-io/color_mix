@@ -2,6 +2,8 @@
 
 A CSS `color-mix()` simulator that lets you experiment with color mixing in different color spaces and instantly preview the results.
 
+View in action: **[https://color-mix-six.vercel.app](https://color-mix-six.vercel.app)**
+
 ## Features
 
 - Mix two colors with adjustable percentages
